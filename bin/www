@@ -1,0 +1,6 @@
+var app = require('../app');
+app.set('port', process.env.PORT || 3000)
+var onBind = function () {
+    console.log('Server running');
+}
+var server = app.listen(app.get('port'), onBind);
